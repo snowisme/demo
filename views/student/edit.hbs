@@ -1,0 +1,15 @@
+<form action="/student/edit/{{student._id}}" method="post">
+   <h1>Edit student</h1>
+   <label for="">Student BirthYear</label><br>
+   <input type="number" name="birthYear" min="2000" max="2005"
+   value="{{ student.birthYear }}"><br><br>
+   <label for="">Student GPA</label><br>
+   <input type="text" name="gpa"
+   value="{{ student.gpa }}"
+   ><br><br>
+   <label for="">Student Image</label><br>
+   <input type="url" name="image"
+   value="{{ student.image }}"
+   ><br><br>
+   <input type="submit" value="Edit">
+</form>

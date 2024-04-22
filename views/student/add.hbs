@@ -1,0 +1,36 @@
+<div class="container text-center col-md-6">
+  <form action="/student/add" method="post">
+    <h1 class="text text-primary text-uppercase">Add new student</h1>
+    <div>
+      <label for="">Student ID</label><br>
+      <input class="form-control" type="text" name="id"><br><br>
+    </div>
+    <label for="">Student Name</label><br>
+    <input class="form-control"type="text" name="name"><br><br>
+    <label for="">Student BirthYear</label><br>
+    <input class="form-control" type="number" name="birthYear" min="2000" max="2005"><br><br>
+    <label for="">Student Gender</label><br>
+    Male <input type="radio" name="gender" value="Male">
+    Female <input type="radio" name="gender" value="Female">
+    <br><br>
+    <label for="">Student GPA</label><br>
+    <input class="form-control" type="number" name="gpa"><br><br>
+    <label for="">Student Image</label><br>
+    <input class="form-control" type="url" name="image"><br><br>
+    <label for="">Student City</label><br>
+    <select class="form-control" name="city" id="">
+      {{#each cities }}
+      <option value="{{ name }}">{{ name }}</option>
+      {{/each}}
+    </select>
+    <br><br>
+    <label for="">Class Name</label><br>
+    <select name="class" id="">
+      {{#each classes }}
+      <option value="{{ _id }}">{{ name }}</option>
+      {{/each}}
+    </select>
+    <br><br>
+    <input type="submit" value="Add">
+  </form>
+</div>

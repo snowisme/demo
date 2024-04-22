@@ -1,0 +1,16 @@
+<div class="row">
+   <div class="col-md-5 text-center">
+      <img src="{{ student.image }}"
+      width="300" height="300">
+      <h3>{{ student.name }}</h3>
+   </div>
+   <div class="col-md-7">
+      <ul>
+         <li>Birth year: {{ student.birthYear }}</li>
+         <li>Gender: {{ student.gender }}</li>
+         <li>GPA: {{ student.gpa }}</li>
+         <li>City: {{ student.city }}</li>
+         <li>Class: {{ student.class.name }}</li>
+      </ul>
+   </div>
+</div>
